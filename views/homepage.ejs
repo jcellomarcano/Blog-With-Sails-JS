@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homepage</title>
+</head>
+<body>
+<style>
+  body{
+    text-align: center;
+  }
+</style>
+  <h1 class="title">Blog with Sails JS</h1>
+  <% if(session.authenticated) { %>
+    <span>Welcome <%= session.user.name%></span>
+    <p>list of post on the blog</p>
+    <a href="/logout">logout</a>
+  <% }else {%>
+    <span>Please login or register</span>
+    <a href="/login">Sign in</a>
+    <a href="/register">Sign up</a>
+<% } %>
+</body>
+</html>

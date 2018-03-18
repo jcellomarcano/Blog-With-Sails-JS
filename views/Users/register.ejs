@@ -1,0 +1,45 @@
+
+<style>
+    body{
+        text-align: center;
+    }
+</style>
+
+<% if(session.flash && session.flash.err) { %>
+    <ul class="alert alert-success">
+<% Object.keys(session.flash.err).forEach(function(error) { %>
+    <li><%- JSON.stringify(session.flash.err[error]) %></li>
+<% }) %>
+</ul>
+<% } %>
+
+<h1>Register form</h1>
+<form action="/register" method="POST">
+    <label>Name:</label>
+    <input type="text" name="name" placeholder="Your name">
+    <br>
+    <br>
+    <label>LastName:</label>
+    <input type="text" name="lastName" placeholder="Your last name">
+    <br>
+    <br>
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="example@email.com">
+    <br>
+    <br>
+    <div class="form-group">
+        <label>Password:</label>
+        <input type="password", name="password" placeholder="Your Pass">
+        <br>
+        <br>
+        <label>Confirm Your Password:</label>
+        <input type="password" placeholder="Must be equals" name="confirmation">
+    </div>
+    <br>
+    <br>
+    <input type="hidden" name="_csrf" value="<%= _csrf %>">
+    <input type="submit" value="Register">
+</form>
+<br>
+<br>
+<a href="/">Back to homepage</a>

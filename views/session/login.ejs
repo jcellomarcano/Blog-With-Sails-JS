@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Form</title>
+</head>
+<body>
+
+<style>
+    body{
+        text-align: center;
+    }
+</style>
+    <h1 class="title">Login:</h1>
+
+
+	<% if(session.flash && session.flash.err) { %>
+		<ul class="alert alert-success">
+	<% Object.keys(session.flash.err).forEach(function(error) { %>
+		<li> <%- JSON.stringify(session.flash.err[error]) %> </li>
+	<% }) %>
+		</ul>
+	<% } %>
+    
+    <form action="/login" method="POST">
+        <input type="email" name="email" placeholder="example@email.com">
+        <input type="password", name="password" placeholder="Your Pass">
+        <input type="hidden" name="_csrf" value="<%= _csrf %>">
+        <input type="submit" value="Login">
+    </form>
+    <br>
+    <br>
+    <a href="/">Back to homepage</a>
+</body>
+</html>
