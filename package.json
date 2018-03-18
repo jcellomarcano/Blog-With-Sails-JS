@@ -33,6 +33,6 @@
     "type": "git",
     "url": "git://github.com/anonymous node/sails user/blog.git"
   },
-  "author": "anonymous node/sails user",
-  "license": ""
+  "author": "ricardodizio@gmail.com",
+  "license": "MIT"
 }
