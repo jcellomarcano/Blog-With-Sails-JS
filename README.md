@@ -22,7 +22,7 @@ $ sails lift --port 80
 
 ## To implement 
 
-- Post model
-- Post controller
+- Post Blog model
+- Post Blog controller
 - Polices and Security
 - views
