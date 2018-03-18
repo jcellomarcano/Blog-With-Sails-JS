@@ -1,21 +1,18 @@
-<<<<<<< HEAD
-# blog
-
-a [Sails](http://sailsjs.org) application
-=======
 # Blog-With-Sails-JS
 Simple Blog with Sails JS
 
-# TO INSTALL:
+# To Install:
 1) clone the repository with git:
 
-  $ git clone https://github.com/ricdizio/Blog-With-Sails-JS/
+$ git clone https://github.com/ricdizio/Blog-With-Sails-JS/
   
 2) run npm install to install all the packages
 
-  $ npm install 
+$ npm install 
 
 3) execute server with sails lift
+
+$ sails lift --port 80
 
 ## Status
 
@@ -29,5 +26,3 @@ Simple Blog with Sails JS
 - Post controller
 - Polices and Security
 - views
-  
->>>>>>> 17b0d5b894d1182f303a6aba3095d0e90ee2d2f1
