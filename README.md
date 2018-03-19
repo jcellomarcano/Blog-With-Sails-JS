@@ -12,7 +12,8 @@ $ npm install
 
 3) execute server with sails lift
 
-$ sails lift --port 80
+$ sails lift --port 80 (if you have sails in your path) or
+$ npm start
 
 ## Status
 
