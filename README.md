@@ -26,3 +26,7 @@ $ sails lift --port 80
 - Post Blog controller
 - Polices and Security
 - views
+
+## License
+
+[MIT](LICENSE)
